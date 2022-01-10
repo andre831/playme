@@ -4,8 +4,8 @@ import Home from './pages/Home';
 import Movies from './pages/Movies';
 import Error from './pages/Error'
 
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
 
 const Routes = ()=> {
     return(
