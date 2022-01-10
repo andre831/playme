@@ -1,0 +1,21 @@
+.logo {
+  width: 80px;
+  margin-left: 30px;
+  font-size: 1.8em;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #fff;
+  transition: 0.3s;
+}
+.logo:hover {
+  color: #ff3737;
+}
+.logo span {
+  color: #ff0000;
+  text-transform: lowercase;
+  letter-spacing: 0;
+}
+
+/*# sourceMappingURL=style.min.css.map */
