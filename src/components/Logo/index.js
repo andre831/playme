@@ -3,7 +3,7 @@ import './style.min.css'
 
 function Logo() {
   return (
-    <Link className='logo' href="/">Play<span>Me</span></Link>           
+    <Link className='logo' to="/">Play<span>Me</span></Link>           
   );
 }
 
