@@ -22,7 +22,7 @@ function Navbar() {
     return (
         <header>
             <nav>
-                <div className="nav fixed-top">
+                <div className="nav">
                     <Logo />
                     <div onClick={toggleMenu} className={activeToggleIcon}>
                         <div className="logo-bar-1"></div>
@@ -31,7 +31,10 @@ function Navbar() {
                     </div>
                     <ul className={activeToggleNav}>
                         <li><Link to="/">Home</Link></li>
-                        <li><Link to="/movies">Movies</Link></li>
+                        <li><Link to="/latest">Latest</Link></li>
+                        <li><Link to="/upcoming">Upcoming</Link></li>
+                        <li><Link to="/popular">Popular</Link></li>
+                        <li><Link to="/favorites">Favorites</Link></li>
                     </ul>
                 </div>
             </nav>
