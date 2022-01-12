@@ -1,0 +1,69 @@
+*,
+p,
+*::before,
+*::after,
+p::before,
+p::after {
+  margin: 0;
+  padding: 0;
+  text-decoration: none !important;
+  list-style: none;
+}
+
+.cardMovie {
+  width: 600px;
+  margin-top: 40px;
+}
+.cardMovie-content--title {
+  justify-content: space-around;
+  width: 365px;
+  border-bottom: 1px solid #bebebe;
+  margin: 10px;
+}
+.cardMovie-content--title h3 {
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+}
+.cardMovie-content--title p {
+  text-align: end;
+  margin: 5px;
+}
+.cardMovie-content--genres p {
+  padding: 10px;
+  margin: 5px;
+  font-weight: bold;
+  color: #fff;
+  background: #0a0024;
+  border-radius: 5px;
+}
+.cardMovie-content--language {
+  padding: 10px;
+}
+.cardMovie-content--language p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.cardMovie-content--buttons a {
+  width: 53vw;
+  margin: 5px;
+  background: #c30303;
+  border: 1px solid transparent;
+}
+.cardMovie-content--buttons a:hover {
+  background: #fff;
+  color: #c30303;
+  border: 1px solid #c30303;
+}
+.cardMovie-content--average p {
+  width: 50px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-weight: 900;
+  color: #fff;
+  background: #0a0024;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=style.min.css.map */

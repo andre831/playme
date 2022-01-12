@@ -1,0 +1,76 @@
+*,
+p,
+*::before,
+*::after,
+p::before,
+p::after{
+    margin: 0;
+    padding: 0;
+    text-decoration: none !important;
+    list-style: none;
+}
+
+.cardMovie{
+    width: 600px;
+    margin-top: 40px;
+    &-content{
+        &--title{
+            justify-content: space-around;
+            width: 365px;
+            border-bottom: 1px solid rgb(190, 190, 190);
+            margin: 10px;
+            h3{
+                text-transform: uppercase;
+                text-align: center;
+                color: #000;
+            }
+            p{
+                text-align: end;
+                margin: 5px;
+            }
+        }
+        &--genres{
+            p{
+                padding: 10px;
+                margin: 5px;
+                font-weight: bold;
+                color: #fff;
+                background: #0a0024;
+                border-radius: 5px;
+            }
+        }
+        &--language{
+            padding: 10px;
+            p{
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+        }
+        &--buttons{
+            a{
+               width: 53vw;
+               margin: 5px;
+               background: #c30303;
+               border: 1px solid transparent;
+
+               &:hover{
+                    background: #fff;
+                    color: #c30303;
+                    border: 1px solid #c30303;
+               }
+            }
+        }
+        &--average{
+            p{  
+                width: 50px;
+                margin: 10px;
+                padding: 10px;
+                text-align: center;
+                font-weight: 900;
+                color: #fff;
+                background: #0a0024;
+                border-radius: 10px;
+            }
+        }
+    }
+}
