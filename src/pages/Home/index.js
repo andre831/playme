@@ -22,22 +22,27 @@ const Home = ()=> {
 
     return (
         <div>
-            <h2>The better of weeka</h2>
-            <div className="d-flex flex-column flex-md-row justify-content-center">  
-                {
-                    movies.map((movie)=>{
-                        return(
-                            <div key={movie.id}>
-                                <Card 
-                                    poster={img(400, movie.poster_path)} 
-                                    title={movie.title}
-                                    language={movie.original_language}
-                                    average={movie.vote_average}
-                                />
-                            </div>
-                        );
-                    })
-                }
+            <div className="container">
+                <div className="row">
+                <h2>The better of weeka</h2> 
+                    <div className="d-flex flex-column flex-lg-row flex-lg-wrap justify-content-center">
+                        
+                        {
+                            movies.map((movie)=>{
+                                return(
+                                    <div key={movie.id}>
+                                        <Card 
+                                            poster={img(400, movie.poster_path)} 
+                                            title={movie.title}
+                                            language={movie.original_language}
+                                            average={movie.vote_average}
+                                        />
+                                    </div>
+                                );
+                            })
+                        }
+                    </div>
+                 </div>
             </div>
         </div>
     );
