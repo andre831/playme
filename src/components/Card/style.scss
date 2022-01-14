@@ -74,3 +74,21 @@ p::after{
         }
     }
 }
+
+@media (min-width: 992px){
+    .cardMovie{
+        &-content{
+            &--title{
+                h3{
+                    height: 70px;
+                }
+            }
+            &--buttons{
+                a{
+                   width: 7vw;
+                   
+                }
+            }
+        }
+    }
+}

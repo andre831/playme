@@ -8,18 +8,18 @@ const Card = (props) => {
         <div className="container">
             <div className="row">
                 <div className="cardMovie">
-                    <div className="d-flex flex-column flex-md-row justify-content-center align-items-center cardMovie-content">
+                    <div className="d-flex flex-column flex-lg-row justify-content-center align-items-center cardMovie-content">
                         <img width="200" src={props.poster} />
                         <div>
-                            <div className="d-flex justify-content-md-start text-start align-items-center cardMovie-content--title">
+                            <div className="d-flex justify-content-lg-start text-start align-items-center cardMovie-content--title">
                                 <Link to="">
                                     <h3>
                                         {props.title}
                                     </h3>
                                 </Link>
                             </div>
-                           <div  className="d-flex flex-row justify-content-between flex-column flex-md-row align-items-center">
-                                <div className="d-flex flex-column flex-md-row cardMovie-content--buttons">
+                           <div  className="d-flex flex-row justify-content-between flex-column flex-lg-row align-items-center">
+                                <div className="d-flex flex-column flex-lg-row cardMovie-content--buttons">
                                     <Link to="" className="btn btn-primary">More</Link>
                                     <Link to="" className="btn btn-primary">Trailer</Link>
                                 </div>
