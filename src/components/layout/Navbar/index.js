@@ -31,10 +31,9 @@ function Navbar() {
                     </div>
                     <ul className={activeToggleNav}>
                         <li><Link to="/">Home</Link></li>
-                        <li><Link to="/latest">Latest</Link></li>
+                        <li><Link to="/toprated">Top Rated</Link></li>
                         <li><Link to="/upcoming">Upcoming</Link></li>
                         <li><Link to="/popular">Popular</Link></li>
-                        <li><Link to="/favorites">Favorites</Link></li>
                     </ul>
                 </div>
             </nav>

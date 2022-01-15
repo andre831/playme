@@ -68,7 +68,7 @@ p::after {
 
 @media (min-width: 992px) {
   .cardMovie-content--title h3 {
-    height: 70px;
+    height: 90px;
   }
   .cardMovie-content--buttons a {
     width: 7vw;

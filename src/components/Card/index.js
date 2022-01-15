@@ -11,7 +11,7 @@ const Card = (props) => {
                     <div className="d-flex flex-column flex-lg-row justify-content-center align-items-center cardMovie-content">
                         <img width="200" src={props.poster} />
                         <div>
-                            <div className="d-flex justify-content-lg-start text-start align-items-center cardMovie-content--title">
+                            <div className="d-flex justify-content-center text-start align-items-center cardMovie-content--title">
                                 <Link to="">
                                     <h3>
                                         {props.title}

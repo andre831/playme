@@ -6,29 +6,30 @@ import Container from "../../components/Container";
 
 import '../style.min.css'
 
-const Home = ()=> {
+const Upcoming = ()=> {
     const [movies, setMovies] = useState([]);
  
-    const getAllMovies = api.get("/movie/now_playing", {
-        params: { api_key }
-    });
-
     useEffect(() =>{
-        getAllMovies.then(r =>{
-        setMovies(r.data.results);
-        console.log(movies);
-        });
+        async function getUpcomingMovies(){
+            const response = await api.get("/movie/upcoming", {
+                params: { api_key }
+            });
+            const dataMovie = response.data.results ;
+            setMovies(dataMovie);
+            console.log(movies);
+        }
+        getUpcomingMovies()
     }, [])
-
+    
     const img = (width, path) => `https://image.tmdb.org/t/p/w${width}/${path}`;
 
     return (
         <div>
             <div className="container">
                 <div className="row">
-                    <div className="d-flex justify-content-center text-center body--title">
-                        <h2>Home</h2>
-                    </div>
+                            <div className="d-flex justify-content-center text-center body--title">
+                                <h2>Upcoming</h2>
+                            </div>
                     <div className="d-flex flex-column flex-lg-row flex-lg-wrap justify-content-center">
                         
                         {
@@ -52,4 +53,4 @@ const Home = ()=> {
     );
 }
 
-export default Home;
+export default Upcoming;

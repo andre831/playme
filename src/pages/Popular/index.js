@@ -6,18 +6,19 @@ import Container from "../../components/Container";
 
 import '../style.min.css'
 
-const Home = ()=> {
+const TopRated = ()=> {
     const [movies, setMovies] = useState([]);
- 
-    const getAllMovies = api.get("/movie/now_playing", {
-        params: { api_key }
-    });
 
     useEffect(() =>{
-        getAllMovies.then(r =>{
-        setMovies(r.data.results);
-        console.log(movies);
-        });
+        async function getTopRatedMovies(){
+            const response = await api.get("/movie/popular", {
+                params: { api_key }
+            });
+            const dataMovie = response.data.results ;
+            setMovies(dataMovie);
+            console.log(movies);
+        }
+        getTopRatedMovies()
     }, [])
 
     const img = (width, path) => `https://image.tmdb.org/t/p/w${width}/${path}`;
@@ -27,8 +28,8 @@ const Home = ()=> {
             <div className="container">
                 <div className="row">
                     <div className="d-flex justify-content-center text-center body--title">
-                        <h2>Home</h2>
-                    </div>
+                        <h2>Popular</h2>
+                    </div> 
                     <div className="d-flex flex-column flex-lg-row flex-lg-wrap justify-content-center">
                         
                         {
@@ -52,4 +53,4 @@ const Home = ()=> {
     );
 }
 
-export default Home;
+export default TopRated;
