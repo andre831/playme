@@ -6,13 +6,13 @@ import Upcoming from './pages/Upcoming';
 import Popular from './pages/Popular';
 import Error from './pages/Error'
 
-import Navbar from './components/layout/Navbar';
+import Sidebar from './components/layout/Sidebar';
 import Footer from './components/layout/Footer';
 
 const Routes = ()=> {
     return(
         <BrowserRouter>
-			<Navbar />
+			<Sidebar />
             <Switch>
                 <Route exact path="/" component={ Home } />
                 <Route exact path="/toprated" component={ TopRated } />

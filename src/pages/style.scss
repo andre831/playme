@@ -1,3 +1,25 @@
-.body--title{
-    background: red;
+::-webkit-scrollbar {
+    width: 5px;
+    background:transparent;
+}
+
+::-webkit-scrollbar-track { 
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    border:0.2px solid white;
+    border-radius: 15px;
+    background:#0d0925;
+
+    @media(max-width: 576px){
+        background:#fff;
+    }
+} 
+
+.content-body{
+    margin-top: 60px;
+    @media(min-width:1400px){
+        margin-left: 70px;
+    }
 }

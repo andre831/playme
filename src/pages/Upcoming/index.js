@@ -5,6 +5,7 @@ import Card from "../../components/Card";
 import Container from "../../components/Container";
 
 import '../style.min.css'
+import Title from "../../components/layout/Title";
 
 const Upcoming = ()=> {
     const [movies, setMovies] = useState([]);
@@ -16,7 +17,6 @@ const Upcoming = ()=> {
             });
             const dataMovie = response.data.results ;
             setMovies(dataMovie);
-            console.log(movies);
         }
         getUpcomingMovies()
     }, [])
@@ -28,7 +28,7 @@ const Upcoming = ()=> {
             <div className="container">
                 <div className="row">
                             <div className="d-flex justify-content-center text-center body--title">
-                                <h2>Upcoming</h2>
+                                <Title>Upcoming</Title>
                             </div>
                     <div className="d-flex flex-column flex-lg-row flex-lg-wrap justify-content-center">
                         

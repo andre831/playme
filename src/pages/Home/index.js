@@ -5,6 +5,7 @@ import Card from "../../components/Card";
 import Container from "../../components/Container";
 
 import '../style.min.css'
+import Title from "../../components/layout/Title";
 
 const Home = ()=> {
     const [movies, setMovies] = useState([]);
@@ -16,7 +17,6 @@ const Home = ()=> {
     useEffect(() =>{
         getAllMovies.then(r =>{
         setMovies(r.data.results);
-        console.log(movies);
         });
     }, [])
 
@@ -26,25 +26,26 @@ const Home = ()=> {
         <div>
             <div className="container">
                 <div className="row">
-                    <div className="d-flex justify-content-center text-center body--title">
-                        <h2>Home</h2>
+                    <div className="d-flex justify-content-center text-center">
+                        <Title>Home</Title>
                     </div>
-                    <div className="d-flex flex-column flex-lg-row flex-lg-wrap justify-content-center">
-                        
-                        {
-                            movies.map((movie)=>{
-                                return(
-                                    <div key={movie.id}>
-                                        <Card 
-                                            poster={img(400, movie.poster_path)} 
-                                            title={movie.title}
-                                            language={movie.original_language}
-                                            average={movie.vote_average}
-                                        />
-                                    </div>
-                                );
-                            })
-                        }
+                    <div className="content-body">
+                        <div className="d-flex flex-column flex-lg-row flex-lg-wrap justify-content-center">
+                            {
+                                movies.map((movie)=>{
+                                    return(
+                                        <div key={movie.id}>
+                                            <Card 
+                                                poster={img(400, movie.poster_path)} 
+                                                title={movie.title}
+                                                language={movie.original_language}
+                                                average={movie.vote_average}
+                                            />
+                                        </div>
+                                    );
+                                })
+                            }
+                        </div>
                     </div>
                  </div>
             </div>

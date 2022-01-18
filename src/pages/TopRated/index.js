@@ -5,6 +5,7 @@ import Card from "../../components/Card";
 import Container from "../../components/Container";
 
 import '../style.min.css'
+import Title from "../../components/layout/Title";
 
 const TopRated = ()=> {
     const [movies, setMovies] = useState([]);
@@ -16,7 +17,6 @@ const TopRated = ()=> {
             });
             const dataMovie = response.data.results ;
             setMovies(dataMovie);
-            console.log(movies);
         }
         getTopRatedMovies()
     }, [])
@@ -28,7 +28,7 @@ const TopRated = ()=> {
             <div className="container">
                 <div className="row">
                     <div className="d-flex justify-content-center text-center body--title">
-                        <h2>Top Rated</h2>
+                       <Title>Top Rated</Title>
                     </div>
                     <div className="d-flex flex-column flex-lg-row flex-lg-wrap justify-content-center">  
                         {
