@@ -44,13 +44,26 @@ p::after {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-.cardMovie-content--buttons a {
-  width: 53vw;
+.cardMovie-content--buttons a,
+.cardMovie-content--buttons button {
+  width: 90px;
   margin: 5px;
-  background: #c30303;
   border: 1px solid transparent;
+  background: #ff0000;
+  color: #fff;
 }
-.cardMovie-content--buttons a:hover {
+.cardMovie-content--buttons a:hover,
+.cardMovie-content--buttons button:hover {
+  background: transparent;
+  color: #c30303;
+  border: 1px solid #c30303;
+}
+.cardMovie-content--buttons a:nth-child(3),
+.cardMovie-content--buttons button:nth-child(3) {
+  background: #0a0024;
+}
+.cardMovie-content--buttons a:nth-child(3):hover,
+.cardMovie-content--buttons button:nth-child(3):hover {
   background: transparent;
   color: #c30303;
   border: 1px solid #c30303;

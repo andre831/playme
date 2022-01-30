@@ -8,6 +8,7 @@ import Error from './pages/Error'
 
 import Sidebar from './components/layout/Sidebar';
 import Footer from './components/layout/Footer';
+import Movie from './pages/Movie';
 
 const Routes = ()=> {
     return(
@@ -18,6 +19,7 @@ const Routes = ()=> {
                 <Route exact path="/toprated" component={ TopRated } />
                 <Route exact path="/upcoming" component={ Upcoming } />
                 <Route exact path="/popular" component={ Popular } />
+                <Route exact path="/movie/id=:id" component={Movie} />
 
                 <Route path="*" component={Error} />
             </Switch>

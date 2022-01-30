@@ -47,17 +47,26 @@ p::after{
             }
         }
         &--buttons{
-            a{
-               width: 53vw;
-               margin: 5px;
-               background: #c30303;
-               border: 1px solid transparent;
-
-               &:hover{
+            a,
+            button{
+                width: 90px;
+                margin: 5px;
+                border: 1px solid transparent;
+                background: #ff0000;
+                color: #fff;
+                &:hover{
                     background: transparent;
                     color: #c30303;
                     border: 1px solid #c30303;
-               }
+                }
+                &:nth-child(3){
+                    background: #0a0024;
+                    &:hover{
+                        background: transparent;
+                        color: #c30303;
+                        border: 1px solid #c30303;
+                    }
+                }
             }
         }
         &--average{

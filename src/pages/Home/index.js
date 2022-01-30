@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link, useParams  } from "react-router-dom";
 
 import { api, api_key } from "../../services/api";
 import Card from "../../components/Card";
@@ -7,7 +8,11 @@ import Container from "../../components/Container";
 import '../style.min.css'
 import Title from "../../components/layout/Title";
 
+
 const Home = ()=> {
+
+    const id = useParams('id');
+
     const [movies, setMovies] = useState([]);
  
     const getAllMovies = api.get("/movie/now_playing", {
@@ -36,11 +41,11 @@ const Home = ()=> {
                                     return(
                                         <div key={movie.id}>
                                             <Card 
-                                                poster={img(400, movie.poster_path)} 
-                                                title={movie.title}
-                                                language={movie.original_language}
-                                                average={movie.vote_average}
-                                            />
+                                                poster={img(400, movie.poster_path)} title={movie.title}
+                                                language={movie.original_language} average={movie.vote_average}>
+                                                    <Link to={`movie/id=${movie.id}` } className="btn btn-danger">More</Link>
+                                                    <button className="btn btn-danger">Trailer</button>
+                                            </Card>
                                         </div>
                                     );
                                 })

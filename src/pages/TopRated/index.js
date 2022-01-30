@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import { api, api_key } from "../../services/api";
 import Card from "../../components/Card";
@@ -36,11 +37,11 @@ const TopRated = ()=> {
                                 return(
                                     <div key={movie.id}>
                                         <Card 
-                                            poster={img(400, movie.poster_path)} 
-                                            title={movie.title}
-                                            language={movie.original_language}
-                                            average={movie.vote_average}
-                                        />
+                                            poster={img(400, movie.poster_path)} title={movie.title}
+                                            language={movie.original_language} average={movie.vote_average}>
+                                                <Link to={`movie/id=${movie.id}` } className="btn btn-danger">More</Link>
+                                                <button className="btn btn-danger">Trailer</button>
+                                        </Card>
                                     </div>
                                 );
                             })

@@ -64,7 +64,7 @@ function Navbar(props) {
                             <button onClick={toggleOpenFavorites} className={activeToggleFavorites} >
                                 Favorites
                             </button>
-                            <span className='nav-favCounter'>1</span>
+                            <span className='nav-favCounter'>0</span>
                         </li>
                     </ul>
                 </div>
