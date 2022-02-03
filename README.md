@@ -14,6 +14,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+(se não funcionar, da um npm install e quando a página abrir, apaga todo texto que vir depois de localhost:3000)
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
