@@ -8,7 +8,7 @@ import Container from '../../components/Container';
 export default function Movie(){
 
     const { id } = useParams();
-    const [movie, setMovie] = useState([])
+    const [movie, setMovie] = useState([]);
 
     useEffect(()=>{
         async function getMovie(){
@@ -22,8 +22,6 @@ export default function Movie(){
         
         getMovie()
     },[])
-
-    const storage = localStorage;
 
     function toggleSave(){
         
@@ -50,7 +48,7 @@ export default function Movie(){
     return(
        <Container>
             <div>
-                <h2>Pagina do flme { id }</h2>
+                <h2>Pagina do flme { movie.title }</h2>
                 <button onClick={() => toggleSave()}>Save</button>
             </div>
        </Container>

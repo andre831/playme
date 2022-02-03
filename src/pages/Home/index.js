@@ -11,15 +11,16 @@ import Title from "../../components/layout/Title";
 
 const Home = ()=> {
 
-    const id = useParams('id');
+    const { id } = useParams();
 
     const [movies, setMovies] = useState([]);
- 
-    const getAllMovies = api.get("/movie/now_playing", {
-        params: { api_key }
-    });
+    const [ trailer, setTrailer] = useState([])
 
     useEffect(() =>{
+        const getAllMovies = api.get("/movie/now_playing", {
+            params: { api_key }
+        });
+
         getAllMovies.then(r =>{
         setMovies(r.data.results);
         });
@@ -44,7 +45,7 @@ const Home = ()=> {
                                                 poster={img(400, movie.poster_path)} title={movie.title}
                                                 language={movie.original_language} average={movie.vote_average}>
                                                     <Link to={`movie/id=${movie.id}` } className="btn btn-danger">More</Link>
-                                                    <button className="btn btn-danger">Trailer</button>
+                                                    <a href={`https://www.youtube.com/results?search_query=${movie.title} Trailer`} target="_blank" className="btn btn-danger">Trailer</a>
                                             </Card>
                                         </div>
                                     );

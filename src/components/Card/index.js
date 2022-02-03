@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import { api, api_key } from '../../services/api';
 
 import './style.min.css'
 
 const Card = (props) => {
+
     return(
         <div className="container">
             <div className="row">
@@ -20,8 +22,9 @@ const Card = (props) => {
                                 </Link>
                             </div>
                            <div  className="d-flex flex-row justify-content-between flex-column flex-lg-row align-items-center">
-                                <div className="d-flex flex-column flex-lg-row cardMovie-content--buttons">
+                                <div className="d-flex flex-column  cardMovie-content--buttons">
                                    {props.children}
+                                  
                                 </div>
                                 <div className="text-end cardMovie-content--average">
                                     <p>{props.average}</p>
